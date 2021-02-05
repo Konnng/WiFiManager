@@ -151,6 +151,8 @@ class WiFiManager
     WiFiManager();
     ~WiFiManager();
     void WiFiManagerInit();
+	
+    uint8_t       connectWifi(String ssid, String pass);
 
     // auto connect to saved wifi, or custom, and start config portal on failures
     boolean       autoConnect();
@@ -492,7 +494,6 @@ class WiFiManager
 
     bool          startAP();
 
-    uint8_t       connectWifi(String ssid, String pass);
     bool          setSTAConfig();
     bool          wifiConnectDefault();
     bool          wifiConnectNew(String ssid, String pass);
